@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://yourcompany.com/" targetNamespace="http://yourcompany.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="getLabelInfo" type="tns:getLabelInfo" />
+  <xs:element name="getLabelInfoResponse" type="tns:getLabelInfoResponse" />
+  <xs:element name="sayHi" type="tns:sayHi" />
+  <xs:element name="sayHiResponse" type="tns:sayHiResponse" />
+  <xs:element name="updateLabelInfo" type="tns:updateLabelInfo" />
+  <xs:element name="updateLabelInfoResponse" type="tns:updateLabelInfoResponse" />
+  <xs:complexType name="getLabelInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="getLabelInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateLabelInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="updateLabelInfoResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="sayHi">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="sayHiResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

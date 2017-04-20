@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://yourcompany.com/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="LabelsInfoService" targetNamespace="http://yourcompany.com/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://localhost:8080/LabelServer/LabelsInfoPort?xsd=1" namespace="http://yourcompany.com/" />
+    </xsd:schema>
+  </types>
+  <message name="sayHi">
+    <part name="parameters" element="tns:sayHi" />
+  </message>
+  <message name="sayHiResponse">
+    <part name="parameters" element="tns:sayHiResponse" />
+  </message>
+  <message name="getLabelInfo">
+    <part name="parameters" element="tns:getLabelInfo" />
+  </message>
+  <message name="getLabelInfoResponse">
+    <part name="parameters" element="tns:getLabelInfoResponse" />
+  </message>
+  <message name="updateLabelInfo">
+    <part name="parameters" element="tns:updateLabelInfo" />
+  </message>
+  <message name="updateLabelInfoResponse">
+    <part name="parameters" element="tns:updateLabelInfoResponse" />
+  </message>
+  <portType name="LabelsInfoDelegate">
+    <operation name="sayHi">
+      <input message="tns:sayHi" />
+      <output message="tns:sayHiResponse" />
+    </operation>
+    <operation name="getLabelInfo">
+      <input message="tns:getLabelInfo" />
+      <output message="tns:getLabelInfoResponse" />
+    </operation>
+    <operation name="updateLabelInfo">
+      <input message="tns:updateLabelInfo" />
+      <output message="tns:updateLabelInfoResponse" />
+    </operation>
+  </portType>
+  <binding name="LabelsInfoPortBinding" type="tns:LabelsInfoDelegate">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="sayHi">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getLabelInfo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="updateLabelInfo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="LabelsInfoService">
+    <port name="LabelsInfoPort" binding="tns:LabelsInfoPortBinding">
+      <soap:address location="http://localhost:8080/LabelServer/LabelsInfoPort" />
+    </port>
+  </service>
+</definitions>
